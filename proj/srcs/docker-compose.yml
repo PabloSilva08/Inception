@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  mariadb:
+    image: mariadb
+    container_name: mariadb-cont
+    build: 
+      context: requirements/mariadb/
+      dockerfile: Dockerfile
+
+  nginx:
+    image: nginx
+    container_name: nginx-cont
+    build: 
+      context: requirements/nginx/
+      dockerfile: Dockerfile
+
+  wordpress:
+    image: wordpress
+    container_name: wp-cont
+    build:
+      context: requirements/wordpress/
+      dockerfile: Dockerfile
+
+
